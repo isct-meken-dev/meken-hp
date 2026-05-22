@@ -102,195 +102,27 @@ header
     outline: none;
     color: #e9fbff;
 }
-
-/*
-hero
-*/
-.hero{
-    position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    
-}
-.hero > strong{
-    position: absolute;
-    top: 50%;
-    left: 8%;
-    transform: translateY(-50%);
-    font-size: clamp(30px, 3.8vw, 60px);
-    font-weight: 900;
-    color: #ffffff;
-    font-family: 'Noto Sans JP', 'Noto Sans', sans-serif;
-    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.28), 0 0 18px rgba(0, 0, 0, 0.18);
-    letter-spacing: 0.04em;
-    line-height: 1.02;
-    width: auto;
-    max-width: 90%;
-    margin: 0;
-    text-align: left;
-    text-transform: uppercase;
-}
-.hero-headline br{
-    display: block;
-    margin-top: 0.3em;
-    
-}
-.hero > headline{
-    content: "";
-    position: absolute;
-    margin-bottom: 10px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.2);
-    filter: blur(10px);
-    z-index: -1;
-}
-.hero > canvas {
-  border:1px solid black;
-  margin: 0 auto;
-  width: 100%;
-  height: auto;
-  opacity: 0.3;
-  z-index: -1;
-  
-}
-.hero-waves {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: clamp(100px, 9vw, 130px);
-    height: 100%;
-    z-index: -2;
-    overflow: hidden;
-    pointer-events: none;
-}
-.hero-wave-svg {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 150vh;
-    min-width: 900px;
-    height: clamp(70px, 9vw, 130px);
-    transform: translate(-50%, -50%) rotate(-90deg);
-    transform-origin: center;
-}
-.hero-parallax > use {
-    animation: hero-wave-drift 22s cubic-bezier(.55, .5, .45, .5) infinite;
-}
-.hero-parallax > use:nth-child(1) {
-    animation-delay: -2s;
-    animation-duration: 8s;
-}
-.hero-parallax > use:nth-child(2) {
-    animation-delay: -3s;
-    animation-duration: 11s;
-}
-.hero-parallax > use:nth-child(3) {
-    animation-delay: -4s;
-    animation-duration: 14s;
-}
-.hero-parallax > use:nth-child(4) {
-    animation-delay: -5s;
-    animation-duration: 20s;
-}
-.top-scroll{
-    position: absolute;
-    left: 50%;
-    bottom: 48px;
-    transform: translateX(-50%);
-    z-index: 20;
-}
-.scroll-symbol{
-    color: #fff;
-    position: relative;
-    display: inline-block;
-    text-decoration: none;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    padding: 8px 12px;
-    border: 0;
-    transition: color 0.2s ease, transform 0.25s ease;
-}
-.scroll-symbol::after{
-    content: "";
-    position: absolute;
-    left: 12px;
-    right: 12px;
-    bottom: 3px;
-    height: 2px;
-    border-radius: 999px;
-    background: linear-gradient(90deg, rgba(154, 232, 255, 0.95), rgba(255, 255, 255, 0.95));
-    transform: scaleX(0.05);
-    transform-origin: left center;
-    opacity: 0;
-    transition: transform 0.32s cubic-bezier(0.17, 0.84, 0.44, 1), opacity 0.2s ease;
-}
-.scroll-symbol:hover{
-    opacity: 1;
-    color: #e9fbff;
-    transform: translateY(-1px);
-}
-.scroll-symbol:hover::after,
-.scroll-symbol:focus-visible::after{
-    opacity: 1;
-    transform: scaleX(1);
-}
-.scroll-symbol:focus-visible{
-    outline: none;
-    color: #e9fbff;
-}
-
-@keyframes hero-wave-drift {
-    0% {
-        transform: translate3d(-90px, 0, 0);
+@media (max-width: 820px) {
+    .header{
+        padding: 10px 14px;
     }
-    100% {
-        transform: translate3d(85px, 0, 0);
+    .header > .logo > img{
+        width: 80px;
     }
-}
-
-.hero-video{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -10;
-    opacity: 0.9;
-    position: fixed;
-    transition: filter 0.2s ease;
-    filter: blur(0);
-}
-.hero-video.is-blurred {
-    filter: blur(10px);
-}
-.blur-layer {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100vh;
-  z-index: -1;
-  backdrop-filter: blur(0);
-  background-color: rgba(0, 0, 0, 0); /* 少し暗くするなら */
-    transition: backdrop-filter 0.2s, background-color 0.2s;
-}
-.blur-layer.is-blurred {
-  backdrop-filter: blur(10px);
-  background-color: rgba(0, 0, 0, 0.4); /* 暗くして文字を読みやすく */
-}
-.blur-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  backdrop-filter: blur(0px); /* 最初はぼかしゼロ */
-  z-index: -1;
-  pointer-events: none; /* 下の要素をクリックできるようにする */
+    .nav-list{
+        gap: 0;
+    }
+    .nav-item a{
+        font-size: 14px;
+        padding: 6px 9px;
+    }
+    .nav-item a::after{
+        left: 9px;
+        right: 9px;
+        bottom: 2px;
+    }
+    .nav-item + .nav-item::before{
+        height: 14px;
+        margin: 0 6px;
+    }
 }
