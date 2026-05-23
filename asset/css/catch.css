@@ -10,8 +10,6 @@
     margin-bottom: 80px;
 }
 
-/* テキストエリア */
-/* catch_3.css を修正 */
 .concept-disc {
     flex: 1;
     text-align: left;
@@ -95,5 +93,85 @@
     }
     .catch-discription {
         text-align: center !important;
+    }
+}
+@charset "UTF-8";
+
+/* =========================================
+   Concept セクション（テキストのみのミニマルスタイル）
+   ========================================= */
+
+/* コンテナ全体：中央寄せでスッキリと見せる */
+.concept {
+    width: 90%;
+    max-width: 800px; /* 画像がないため、テキストが間延びしない幅に制限 */
+    margin: 0 auto 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.concept-disc {
+    width: 100%;
+}
+
+/* --- 見出し：シンプルで洗練されたスタイル --- */
+.concept .topsection-headline {
+    display: inline-block;
+    background: none !important;
+    font-size: 2rem;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    margin-bottom: 40px;
+    color: #fff;
+    padding-bottom: 20px;
+    
+    /* 全体に薄い線を敷き、中央だけブランドカラー（水色）にする上品な演出 */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    position: relative;
+}
+
+.concept .topsection-headline::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* アクセントの幅 */
+    height: 2px;
+    background-color: #00c3ff; /* サイト全体の共通アクセントカラー */
+}
+
+/* --- 説明文：タイポグラフィ（読みやすさ）の最適化 --- */
+.catch-discription p {
+    font-size: 1.05rem;
+    line-height: 2.2; /* 行間をゆったりと取る */
+    color: rgba(255, 255, 255, 0.85); /* 真っ白ではなく少し落として目に優しく */
+    margin: 0 auto;
+    letter-spacing: 0.05em;
+    font-weight: 300;
+    
+    /* PC表示では両端揃えにすると、ブロックとして美しく見えます */
+    text-align: justify;
+    text-justify: inter-ideograph;
+}
+
+/* --- レスポンシブ対応：スマホ表示 --- */
+@media (max-width: 820px) {
+    .concept {
+        margin-bottom: 60px;
+    }
+    
+    .concept .topsection-headline {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+    }
+    
+    .catch-discription p {
+        font-size: 1rem;
+        line-height: 1.9;
+        text-align: left; /* スマホの狭い画面では左寄せの方が読みやすい */
     }
 }
