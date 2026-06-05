@@ -1,0 +1,96 @@
+/* =========================================
+   コンタクト案内パネル（タブ内）
+   ========================================= */
+
+.contact-panel-container {
+    margin: 20px 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* 上部の注記（※） */
+.contact-notice {
+    font-size: 0.95rem;
+    color: #00c3ff;
+    margin: 0 0 10px 0;
+    padding-left: 10px;
+    border-left: 3px solid #00c3ff;
+}
+
+/* 情報パネル本体 */
+.contact-panel {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+}
+
+.contact-panel:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(0, 195, 255, 0.4);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* パネル内の見出し */
+.contact-panel-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    margin: 0 0 12px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* パネル内の見出しの前の装飾（サイバー風の四角） */
+.contact-panel-title::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: #9dff00;
+}
+
+/* パネル内の説明文 */
+.contact-panel-desc {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 0 20px 0;
+}
+
+/* アクションボタン（リンク） */
+.contact-panel-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: transparent;
+    color: #00c3ff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    border: 1px solid #00c3ff;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.contact-panel-btn:hover {
+    background-color: #00c3ff;
+    color: #000;
+    box-shadow: 0 0 15px rgba(0, 195, 255, 0.4);
+}
+
+/* --- レスポンシブ --- */
+@media (max-width: 768px) {
+    .contact-panel {
+        padding: 20px;
+    }
+    .contact-panel-btn {
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-  
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,6 +19,7 @@
     <link rel="stylesheet" href="asset/css/tab.css">
     <link rel="stylesheet" href="asset/css/responsive.css">
     <link rel="stylesheet" href="asset/css/footer.css">
+    <link rel="stylesheet" href="asset/css/contact.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -108,6 +108,7 @@
       </div>
   
     </section>
+
     <section class="section aboutus">
       <h1 class="topsection-headline ">Hope to join</h1>
       <div class="section-disc">当サークルへの入部申込や活動に関するお問い合わせを随時受け付けています。以下のボタンからご自身の状況に合わせてフォームを選択してください。
@@ -128,63 +129,64 @@
         <div class="tabbody-v" id="tabbody-v">
 
             <div class="tabbody-elem fade-panel" id="tab-p1">
-              
-              <p class="tabbody-img">
-                <img src="asset/images/aboutus/meken.top.webp" class="tabbody-image" alt="キャラデザ">
-              </p>
-              ※ 入部を検討している、あるいは活動に興味がある学生向けの窓口です<br>
-              ・入部届は <a href="https://forms.gle/TtGB8CnfRtiDaSR28">こちら</a><br>
-              アニメ研への入部を希望する方は、こちらのフォームから必要事項を送信してください。確認後、担当者より活動の詳細について折り返しご連絡します。<br>
-              確認後、担当者より活動の詳細について折り返しご連絡します。<br>
+              <div class="contact-panel-container">
+                <p class="contact-notice">※ 入部を検討している、あるいは活動に興味がある学生向けの窓口です</p>
+                
+                <div class="contact-panel">
+                  <h3 class="contact-panel-title">入部届</h3>
+                  <p class="contact-panel-desc">アニメ研への入部を希望する方は、こちらのフォームから必要事項を送信してください。<br>確認後、担当者より活動の詳細について折り返しご連絡します。</p>
+                  <a href="https://forms.gle/TtGB8CnfRtiDaSR28" class="contact-panel-btn">フォームを開く</a>
+                </div>
 
-              ・お問い合わせは 
-              <a href="https://forms.gle/cv2gsdrfSQNMjwfF8">こちら</a><br>
-              部室見学の希望や、活動内容についてのちょっとした疑問などあれば、こちらからお気軽にご質問ください。
-              <p class="tabbody-discription">
-              
-              </p>
+                <div class="contact-panel">
+                  <h3 class="contact-panel-title">お問い合わせ</h3>
+                  <p class="contact-panel-desc">部室見学の希望や、活動内容についてのちょっとした疑問などあれば、こちらからお気軽にご質問ください。</p>
+                  <a href="https://forms.gle/cv2gsdrfSQNMjwfF8" class="contact-panel-btn">質問・連絡する</a>
+                </div>
+              </div>
               <h2 class="qa">Q&A</h2>
-              <div class="questionset" id="question-in-1">
-                <h3 class="question-headline">Q1. 全くの初心者ですが、制作に参加できますか？</h3>
-                <p class="question-answer">
-                  A1. 可能です。手描きからデジタル、3DCGまで幅広くやっていますが、メンバーの多くは未経験からのスタートです。学祭での上映会を目標に、技術を高めながら日々創作に取り組んでいます。
-                </p>
-              </div>
-              <div class="questionset" id="question-in-2">
-                <h3 class="question-headline">Q2. 制作はせず、アニメを見るのがメインでも大丈夫ですか？</h3>
-                <p class="question-answer">
-                  A2. 大丈夫です。私たちは制作と同様、鑑賞も重視しています。定期的に上映会などのイベントを開き、アニメーションについて考える活動を行っています。作品を深く読み解く視点は、制作側にとっても大きな刺激になります。
-                </p>
-              </div>
-              <div class="questionset" id="question-in-3">
-                <h3 class="question-headline">Q3. 他大学の学生ですが、入部できますか？</h3>
-                <p class="question-answer">
-                  A3. はい。科学大以外の学生も活動に参加しています。実際に他大学から制作に携わっているメンバーもいますので、まずは「お問い合わせ」から見学希望などのご連絡をいただければと思います。
-                </p>
-              </div>
-              <div class="questionset" id="question-in-4">
-                <h3 class="question-headline">Q4. 自分のPCやソフトを持っていないのですが、制作できますか？</h3>
-                <p class="question-answer">
-                  A4. 部室の共用機材やソフトを利用できるので、現時点で道具が揃っていなくても制作を始められます。やりたいことがあれば、まずは部室に来て相談してください。
-                </p>
-              </div>
-              <div class="questionset" id="question-in-5">
-                <h3 class="question-headline">Q5. 入部に費用はかかりますか？</h3>
-                <p class="question-answer">
-                  A5. 部費として半年ごとに4,000円を集めています。主にソフトのライセンス費用、部誌の印刷代、上映用機材の維持費などに充てられます。
-                </p>
-              </div>
+                <div class="questionset" id="question-in-1">
+                  <h3 class="question-headline">Q1. 全くの初心者ですが、制作に参加できますか？</h3>
+                  <p class="question-answer">
+                    A1. 可能です。手描きからデジタル、3DCGまで幅広くやっていますが、メンバーの多くは未経験からのスタートです。学祭での上映会を目標に、技術を高めながら日々創作に取り組んでいます。
+                  </p>
+                </div>
+                <div class="questionset" id="question-in-2">
+                  <h3 class="question-headline">Q2. 制作はせず、アニメを見るのがメインでも大丈夫ですか？</h3>
+                  <p class="question-answer">
+                    A2. 大丈夫です。私たちは制作と同様、鑑賞も重視しています。定期的に上映会などのイベントを開き、アニメーションについて考える活動を行っています。作品を深く読み解く視点は、制作側にとっても大きな刺激になります。
+                  </p>
+                </div>
+                <div class="questionset" id="question-in-3">
+                  <h3 class="question-headline">Q3. 他大学の学生ですが、入部できますか？</h3>
+                  <p class="question-answer">
+                    A3. はい。科学大以外の学生も活動に参加しています。実際に他大学から制作に携わっているメンバーもいますので、まずは「お問い合わせ」から見学希望などのご連絡をいただければと思います。
+                  </p>
+                </div>
+                <div class="questionset" id="question-in-4">
+                  <h3 class="question-headline">Q4. 自分のPCやソフトを持っていないのですが、制作できますか？</h3>
+                  <p class="question-answer">
+                    A4. 部室の共用機材やソフトを利用できるので、現時点で道具が揃っていなくても制作を始められます。やりたいことがあれば、まずは部室に来て相談してください。
+                  </p>
+                </div>
+                <div class="questionset" id="question-in-5">
+                  <h3 class="question-headline">Q5. 入部に費用はかかりますか？</h3>
+                  <p class="question-answer">
+                    A5. 部費として半年ごとに4,000円を集めています。主にソフトのライセンス費用、部誌の印刷代、上映用機材の維持費などに充てられます。
+                  </p>
+                </div>
             </div>
 
             <div class="tabbody-elem fade-panel" id="tab-p2">
-              <p class="tabbody-img">
-                <img src="asset/images/aboutus/work.024.001.character_design.webp" class="tabbody-image" alt="キャラデザ">
-              </p>
-              <p class="tabbody-discription">
-                ※ 卒業生や一般の方など、入部目的以外のご連絡はこちらです。<br>
-                ・お問い合わせフォーム<a href="https://forms.gle/cv2gsdrfSQNMjwfF8">こちら</a><br>
-                OB, OGの方からのご連絡や、その他当サークルに関するお問い合わせはこちらのフォームをご利用ください。
-              </p>
+              <div class="contact-panel-container">
+                <p class="contact-notice">※ 卒業生や一般の方など、入部目的以外のご連絡はこちらです。</p>
+                
+                <div class="contact-panel">
+                  <h3 class="contact-panel-title">お問い合わせ</h3>
+                  <p class="contact-panel-desc">OB, OGの方からのご連絡や、その他当サークルに関するお問い合わせはこちらのフォームをご利用ください。</p>
+                  <a href="https://forms.gle/cv2gsdrfSQNMjwfF8" class="contact-panel-btn">フォームを開く</a>
+                </div>
+              </div>
               <h2 class="qa">Q&A</h2>
               <div class="questionset" id="question-out-1">
                 <h3 class="question-headline">Q2. どんな活動をしているの？</h3>
