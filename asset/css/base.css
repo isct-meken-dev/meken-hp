@@ -1,6 +1,5 @@
-@charset "UTF-8";
 html, body {
-    overflow-x: hidden; /* 横方向のはみ出しを強制カット */
+    overflow-x: hidden; 
     width: 100%;
     margin: 0;
     padding: 0;

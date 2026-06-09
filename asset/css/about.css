@@ -1,13 +1,12 @@
-@charset "UTF-8";
-
-/* about 
+/* 
+about 
 */
 .about {
     margin: 0 auto;
     display: block;
     position: relative;
     width: 100%;
-    max-width: 1000px; /* シネマティックに見せるため少し横幅を広げる */
+    max-width: 1000px; 
 }
 
 /* --- 画像エリア（シネマティック・モニター風） --- */
