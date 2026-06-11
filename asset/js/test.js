@@ -1,3 +1,58 @@
+window.addEventListener('load', function () {
+	const marquee = document.querySelectorAll('.aboutus-images img-box'); // ul要素
+	const items = Array.from(marquee.children);             // 子要素
+	const speedSeconds = 20;                                // スクロール1回にかかる秒数
+	const direction = 'left';                               // 'left' または 'right'
+
+	// 無限スクロール用に複製
+	items.forEach(item => marquee.appendChild(item.cloneNode(true)));
+
+	let marqueeWidth = marquee.scrollWidth / 2;
+	let pos = direction === 'left' ? 0 : -marqueeWidth;
+	const pixelsPerFrame = marqueeWidth / (speedSeconds * 60);
+
+	function animate() {
+		pos += direction === 'left' ? -pixelsPerFrame : pixelsPerFrame;
+
+		// 無限ループ
+		if (pos <= -marqueeWidth) pos += marqueeWidth;
+		if (pos >= 0) pos -= marqueeWidth;
+
+		marquee.style.transform = `translateX(${pos}px)`;
+		requestAnimationFrame(animate);
+	}
+
+	animate();
+});
+
+
+window.addEventListener('load', function () {
+	const marquee = document.querySelector('.marqueer ul'); // ul要素
+	const items = Array.from(marquee.children);             // 子要素
+	const speedSeconds = 20;                                // スクロール1回にかかる秒数
+	const direction = 'left';                               // 'left' または 'right'
+
+	// 無限スクロール用に複製
+	items.forEach(item => marquee.appendChild(item.cloneNode(true)));
+
+	let marqueeWidth = marquee.scrollWidth / 2;
+	let pos = direction === 'left' ? 0 : -marqueeWidth;
+	const pixelsPerFrame = marqueeWidth / (speedSeconds * 60);
+
+	function animate() {
+		pos += direction === 'left' ? -pixelsPerFrame : pixelsPerFrame;
+
+		// 無限ループ
+		if (pos <= -marqueeWidth) pos += marqueeWidth;
+		if (pos >= 0) pos -= marqueeWidth;
+
+		marquee.style.transform = `translateX(${pos}px)`;
+		requestAnimationFrame(animate);
+	}
+
+	animate();
+});
+
 // アニメーション用のテキストデータ（HTMLから抽出）
 const aboutUsData = `科学大アニメーション研究会は、アニメーション制作の全てのプロセスを研究し、実践する団体です。脚本、キャラクターデザイン、コンテ、原画、動画、仕上げ、背景、撮影、編集まで、一貫した制作体制を持ちます。
 
