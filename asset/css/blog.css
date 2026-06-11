@@ -92,6 +92,7 @@ card{
 .section.blog .grid {
     display: flex;
     flex-wrap: wrap;             /* はみ出たら次の行へ折り返す */
+    /* justify-content: flex-start; 左詰めで配置する */
     gap: 20px;                   /* カード同士の隙間を均等にする */
     max-width: 1110px;           /* (350px * 3) + 隙間分。全体としては画面中央に置くため */
     margin: 20px auto;
