@@ -231,10 +231,11 @@ hero video
     opacity: 0.9;
     position: fixed;
     transition: filter 0.2s ease;
-    filter: blur(0);
+    transition: filter 0.3s ease;
+    filter: blur(0px) brightness(1);
 }
 .hero-video.is-blurred {
-    filter: blur(10px);
+    filter: blur(10px) brightness(0.2);
 }
 .blur-layer {
   position: fixed;
@@ -242,12 +243,11 @@ hero video
   width: 100%; height: 100vh;
   z-index: -1;
   backdrop-filter: blur(0);
-  background-color: rgba(0, 0, 0, 0.4); /* 少し暗くするなら */
 transition: backdrop-filter 0.2s, background-color 0.2s;
 }
 .blur-layer.is-blurred {
   backdrop-filter: blur(10px);
-  background-color: rgba(0, 0, 0, 0.5); /* 暗くして文字を読みやすく */
+  background-color: rgba(0, 0, 0, 0.9); 
 }
 .blur-overlay {
   position: fixed;
