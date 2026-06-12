@@ -3,7 +3,7 @@ header
 */
 .header{
     color: #fff;
-    padding: 1vh 2vw;
+    padding: clamp(8px, 1vh, 12px) clamp(10px, 2vw, 28px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,12 +20,17 @@ header
 }
 .header-logo{
     display: block;
-    height: 50px;
+    height: clamp(32px, 4vw, 50px);
     width: auto;
+}
+.header > .logo{
+    flex: 0 0 clamp(72px, 10vw, 140px);
+    width: clamp(72px, 10vw, 140px);
+    min-width: clamp(72px, 10vw, 140px);
 }
 .header > .logo > img{
     display: block;
-    width: 80px;
+    width: clamp(56px, 5vw, 80px);
     height: auto;
 }
 .headr > .img{
@@ -34,8 +39,9 @@ header
     height: auto;
 }
 .header-nav{
-    margin-left: 2vw;            /* ロゴとの間隔も割合で制御 */
-    flex: 1;                     /* ナビゲーションエリアを柔軟に広げる */
+    margin-left: clamp(8px, 2vw, 24px); /* ロゴとの間隔も割合で制御 */
+    flex: 1 1 auto;              /* ナビゲーションエリアを柔軟に広げる */
+    min-width: 0;
     display: flex;
     justify-content: flex-end;
 }
@@ -43,7 +49,7 @@ header
     display: flex;
     align-items: center;
     flex-wrap: nowrap !important; /* リスト内も絶対に1行 */
-    gap: 0.5vw;                  /* 項目間の隙間を画面幅の0.5%に固定 */
+    gap: clamp(2px, 0.45vw, 8px); /* 項目間の隙間を画面幅に応じて制御 */
     list-style: none;
     margin: 0;
     padding: 0;
@@ -57,9 +63,9 @@ header
 .nav-item + .nav-item::before{
     content: "";
     width: 1px;
-    height: 18px;
+    height: clamp(12px, 1.5vw, 18px);
     background: rgba(255, 255, 255, 0.45);
-    margin: 0 10px;
+    margin: 0 clamp(4px, 0.6vw, 10px);
 }
 .nav-item a{
     color: #fff;
@@ -68,19 +74,18 @@ header
     text-decoration: none;
     font-weight: 700;
     letter-spacing: 0.02em;
-    padding: 0.8vh 1vw;
+    padding: clamp(5px, 0.7vw, 8px) clamp(8px, 1vw, 16px);
     border: 0;
     transition: color 0.2s ease, transform 0.25s ease;
-    padding: 8px 16px;           /* クリック領域を少し広げる */
     border-radius: 4px;          /* 角を丸める */
     transition: all 0.3s ease;   /* 変化を滑らかに */
-    font-size: clamp(10px, 1.2vw, 16px); /* 最小10px、最大16pxの間で可変 */
+    font-size: clamp(10px, 1.05vw, 15px); /* 最小10px、最大15pxの間で可変 */
 }
 .nav-item a::after{
     content: "";
     position: absolute;
-    left: 12px;
-    right: 12px;
+    left: clamp(8px, 0.8vw, 12px);
+    right: clamp(8px, 0.8vw, 12px);
     bottom: 3px;
     height: 2px;
     border-radius: 999px;
@@ -112,31 +117,42 @@ header
 .nav-item + .nav-item::before {
     content: "";
     width: 1px;
-    height: 1.5vh;
+    height: clamp(12px, 1.5vw, 18px);
     background: rgba(255, 255, 255, 0.45);
-    margin: 0 0.5vw;
+    margin: 0 clamp(4px, 0.4vw, 8px);
 }
+
 @media (max-width: 820px) {
     .header{
-        padding: 10px 14px;
+        padding: 8px clamp(10px, 2vw, 14px);
+    }
+    .header > .logo{
+        flex-basis: clamp(64px, 16vw, 110px);
+        width: clamp(64px, 16vw, 110px);
+        min-width: clamp(64px, 16vw, 110px);
     }
     .header > .logo > img{
-        width: 80px;
+        width: 100%;
     }
     .nav-list{
-        gap: 0;
+        gap: clamp(1px, 0.25vw, 4px);
     }
     .nav-item a{
-        font-size: 14px;
-        padding: 6px 9px;
+        font-size: clamp(10px, 2.8vw, 14px);
+        padding: clamp(4px, 0.9vw, 6px) clamp(6px, 1.3vw, 9px);
     }
     .nav-item a::after{
-        left: 9px;
-        right: 9px;
+        left: clamp(6px, 1.2vw, 9px);
+        right: clamp(6px, 1.2vw, 9px);
         bottom: 2px;
     }
     .nav-item + .nav-item::before{
-        height: 14px;
-        margin: 0 6px;
+        height: clamp(10px, 2.2vw, 14px);
+        margin: 0 clamp(3px, 1vw, 6px);
+    }
+}
+@media (max-width: 474px) {
+    .logo{
+        display: none;
     }
 }

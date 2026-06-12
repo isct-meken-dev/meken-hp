@@ -12,7 +12,6 @@
 }
 
 .tab{
-    
     align-items: flex-start;
 }
 #tab-v {
@@ -224,3 +223,56 @@ question
     letter-spacing: 0.1em;
 } */
 
+
+@media (max-width: 500px) {
+    .qa {
+        font-size: 1.8rem; /* タイトルを少し小さく */
+        gap: 10px; /* タイトルとラインの間隔を縮める */
+    }
+    .questionset {
+        margin: 30px 0; /* 上下の余白を減らす */
+        padding: 16px; /* 内側の余白も減らす */
+    }
+    .question-headline {
+        font-size: 1rem; /* 見出しを少し小さく */
+        gap: 8px; /* 見出し内のアイコンとテキストの間隔を縮める */
+    }
+    .question-answer {
+        font-size: 0.9rem; /* 回答テキストを少し小さく */
+        padding-left: 28px; /* 回答テキストの左余白を減らす */
+    }
+    .tab {
+        width: 60vw;
+        align-items: center;
+    }
+    #tab-v {
+        margin: 0 auto 18px;
+        width: fit-content;
+        flex-shrink: 0;
+    }
+    #tab-v .tab-contena {
+        margin-left: 0;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    #tab-v .tab-elem {
+        padding: 7px 0 7px 1em;
+        margin-bottom: 8px;
+    }
+    #tabbody-v .tabbody-elem {
+        margin: 24px 16px 0;
+    }
+    #tabbody-v .tabbody-img {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+    }
+    #tabbody-v .tabbody-img img {
+        width: min(100%, 400px);
+    }
+    #tabbody-v .tabbody-discription {
+        width: 100%;
+        margin: 0;
+    }
+}

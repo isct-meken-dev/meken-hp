@@ -235,7 +235,7 @@ hero video
     filter: blur(0px) brightness(1);
 }
 .hero-video.is-blurred {
-    filter: blur(10px) brightness(0.2);
+    filter: blur(10px) brightness(0.4);
 }
 .blur-layer {
   position: fixed;
