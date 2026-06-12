@@ -1,19 +1,8 @@
-/* =========================================
-   About Us (トップページ) - 左右分割レイアウト
-   ========================================= */
+@charset "UTF-8";
 
-.aboutus-new {
-    padding: 80px 0;
-    width: 100%;
-}
-
-.aboutus-split {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 60px; /* 左右の余白 */
-    width: 90%;
-    max-width: 1100px;
+/* about 
+*/
+.about {
     margin: 0 auto;
 }
 /* -----------------------------------
@@ -38,88 +27,105 @@
     
     /* 高さと幅を親のグリッドに強制的に合わせる */
     width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 1000px; /* シネマティックに見せるため少し横幅を広げる */
 }
 
-.img-box img {
+/* --- 画像エリア（シネマティック・モニター風） --- */
+.about-image {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* 比率内で画像が歪まないようにトリミング */
-    transition: transform 0.6s ease, filter 0.6s ease;
-}
-
-.img-box:hover img {
-    transform: scale(1.05);
-    filter: brightness(1.2);
-}
-
-/* メイン画像：上に大きく配置 */
-.img-main {
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
-    aspect-ratio: 16 / 9; /* 縦横比を 16:9（映画・動画のワイド比率）に固定 */
-}
-
-/* サブ画像1：左下に配置 */
-.img-sub1 {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-    aspect-ratio: 3 / 2; /* 縦横比を 3:2（一般的な写真の比率）に固定 */
-}
-
-/* サブ画像2：右下に配置 */
-.img-sub2 {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    aspect-ratio: 3 / 2; /* サブ画像1と同じ比率にする */
-}
-/* -----------------------------------
-テキストエリア
------------------------------------ */
-.aboutus-texts {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-}
-
-/* Introduction のサブタイトル */
-.section-subtitle {
-    font-family: 'keifont', sans-serif; /* サイト内の手書き風フォントを適用 */
-    font-size: 1.6rem;
-    color: #00c3ff; /* サイバーなアクセントカラー */
-    margin-bottom: 12px;
+    aspect-ratio: 16/9; /* 映画のようなワイド比率 */
+    margin: 0 auto 30px auto;
     position: relative;
-    padding-left: 40px; /* 線のぶんだけ余白を空ける */
+    border-radius: 12px;
+    overflow: hidden;
+    background-size: cover !important; /* 画像を枠いっぱいに表示 */
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 195, 255, 0.2); /* ほのかな光のフチ */
 }
 
-.section-subtitle::before {
+/* 画像の上に薄いスキャンラインとヴィネット（四隅の暗がり）を被せる */
+.about-image::before {
     content: "";
     position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 2px;
-    background-color: #00c3ff;
+    inset: 0;
+    background: radial-gradient(circle, transparent 60%, rgba(0,0,0,0.6) 100%),
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 4px;
+    z-index: 1;
+    pointer-events: none;
 }
 
-/* メイン見出し */
-.section-title {
-    font-size: 2.2rem;
-    line-height: 1.4;
-    font-weight: 900;
-    color: #fff;
-    margin-bottom: 30px;
-    letter-spacing: 0.05em;
-    /* 文字にグラデーションをかける */
-    background: linear-gradient(90deg, #fff, #9dff00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+/* --- スライドインしてくるテキスト（HUD・データパネル風） --- */
+.about-discription {
+    position: absolute;
+    z-index: 5;
+    width: fit-content;
+    max-width: 85%;
+    
+    /* ガラスのようなパネルデザイン */
+    background: rgba(10, 15, 20, 0.65) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(157, 255, 0, 0.3) !important;
+    border-radius: 4px !important;
+    padding: 12px 24px !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    
+    /* フォント設定 */
+    color: #9dff00 !important;
+    font-family: 'Noto Sans JP', sans-serif !important;
+    font-size: 1.15rem !important;
+    letter-spacing: 0.1em !important;
+    font-weight: 500;
+}
+
+/* HUDの角にある装飾（照準のようなカギ括弧） */
+.about-discription::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #9dff00;
+    border-bottom: 2px solid #9dff00;
+    bottom: 4px;
+    right: 4px;
+}
+
+/* 左上のテキスト配置と装飾 */
+.about-discription-topleft {
+    top: 8%;
+    left: 5%;
+    border-left: 4px solid #9dff00 !important; /* 左側にアクセントライン */
+}
+
+/* 右下のテキスト配置と装飾 */
+.about-discription-bottomright {
+    bottom: 8%;
+    right: 5%;
+    text-align: right;
+    border-right: 4px solid #9dff00 !important; /* 右側にアクセントライン */
+}
+
+/* --- スライドイン・アニメーションの制御 --- */
+.about-discription {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* .is-visible は JS (slidein.js) によって付与される前提 */
+.about-image.is-visible .about-discription {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* 左から入ってくる動き */
+.about-image.is-visible .about-discription-topleft {
+    transform: translateX(0) !important;
+    transition: opacity 0.6s ease 0.3s, transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0.3s !important; 
+}
+.about-discription-topleft.slidein-left {
+    transform: translateX(-40px);
 }
 
 /* 説明文のコンテナ */

@@ -5,7 +5,7 @@ html, body {
     padding: 0;
 }
 
-/* 全ての要素に border-box を適用（余白計算による幅のズレを防止） */
+/* 全ての要素に border-box を適用 */
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -34,7 +34,6 @@ body::before{
     content: "";
     position: fixed;
     inset: 0;
-    /*background-image: url("../images/back.png");*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -114,16 +113,16 @@ section
 .section-disc {
     font-size: 1rem;
     line-height: 1.8;
-    color: rgba(255, 255, 255, 0.8); /* 真っ白より少し透過させて背景に馴染ませる */
-    max-width: 800px;           /* 長文が間伸びしないように幅を制限 */
-    margin: 0 auto 40px;        /* 中央寄せ */
-    text-align: center;         /* headlineと合わせて中央揃え */
+    color: rgba(255, 255, 255, 0.8); 
+    max-width: 800px;           
+    margin: 0 auto 40px;       
+    text-align: center;         
     padding: 0 20px;
     position: relative;
     letter-spacing: 0.05em;
 }
 
-/* 装飾：上下に薄い境界線を入れて「データパネル」感を出す */
+
 .section-disc::before,
 .section-disc::after {
     content: "";
@@ -152,32 +151,17 @@ section
 }
 
 
-/* ラインが伸びるアニメーション */
 @keyframes line-grow {
     0% { transform: scaleY(0); transform-origin: top; }
     100% { transform: scaleY(1); transform-origin: top; }
 }
 
-/* ふわっと浮き上がる共通アニメーション */
 @keyframes hero-headline-pop {
     0% { opacity: 0; transform: translateY(20px); }
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/*
-.hero > .section-headline::after {
-    content: "";
-    display: block;
-    width: 160px;
-    height: 5px;
-    margin: 18px auto 0;
-    background: linear-gradient(90deg, #0567e8 0%, #ff2b1c 100%);
-    border-radius: 3px;
-    box-shadow: 0 2px 8px rgba(0,195,255,0.2);
-}
-*/
 .footer{
-    /* keifont用クラス */
     .keifont {
         font-family: 'keifont', sans-serif !important;
     }

@@ -77,9 +77,15 @@ header
     padding: clamp(5px, 0.7vw, 8px) clamp(8px, 1vw, 16px);
     border: 0;
     transition: color 0.2s ease, transform 0.25s ease;
+<<<<<<< HEAD
     border-radius: 4px;          /* 角を丸める */
     transition: all 0.3s ease;   /* 変化を滑らかに */
     font-size: clamp(10px, 1.05vw, 15px); /* 最小10px、最大15pxの間で可変 */
+=======
+    padding: 8px 16px;           
+    border-radius: 4px;         
+    transition: all 0.3s ease;  
+>>>>>>> bfe82b5 (for:deploy)
 }
 .nav-item a::after{
     content: "";
@@ -99,8 +105,8 @@ header
     opacity: 1;
     transform: translateY(-1px);
     color: #0fb3ea;
-    background-color: rgba(154, 232, 255, 0.15); /* ブランドカラーの薄い光 */
-    text-shadow: 0 0 8px rgba(154, 232, 255, 0.5); /* 文字をわずかに発光させる */
+    background-color: rgba(154, 232, 255, 0.15); 
+    text-shadow: 0 0 8px rgba(154, 232, 255, 0.5); 
     transform: translateY(-2px);
 }
 .nav-item a:hover::after,
@@ -113,7 +119,65 @@ header
     outline: none;
     color: #e9fbff;
 }
-/* 区切り線を画面幅が狭いときは細く、または非表示に */
+@media (max-width: 820px) {
+    .header{
+        padding: 10px 14px;
+    }
+    .header > .logo > img{
+        width: 80px;
+    }
+    .nav-list{
+        gap: 0;
+    }
+    .nav-item a{
+        font-size: 14px;
+        padding: 6px 9px;
+    }
+    .nav-item a::after{
+        left: 9px;
+        right: 9px;
+        bottom: 2px;
+    }
+    .nav-item + .nav-item::before{
+        height: 14px;
+        margin: 0 6px;
+    }
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap !important; 
+    padding: 1vh 2vw;    
+    width: 100%;
+}
+
+.header-nav {
+    margin-left: 2vw;           
+    flex: 1;                    
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap !important; 
+    gap: 0.5vw;                  
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    white-space: nowrap;       
+}
+
+.nav-item a {
+    font-size: clamp(10px, 1.2vw, 16px); 
+    padding: 0.8vh 1vw;                
+}
+
 .nav-item + .nav-item::before {
     content: "";
     width: 1px;
