@@ -1,0 +1,133 @@
+/* ニュースセクション全体の枠組み */
+.news {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+/* タイトルのデザイン */
+.news-title {
+  font-size: 24px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+}
+
+.news-title span {
+  font-size: 14px;
+  color: #fffefe;
+  font-weight: normal;
+}
+
+/* リスト全体の装飾を消す */
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ニュース1行分のデザイン（横並び設定） */
+.news-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+  gap: 15px;
+}
+
+/* 日付 */
+.news-date {
+  font-size: 14px;
+  color: #ffffff;
+  white-space: nowrap; /* 改行させない */
+}
+
+/* カテゴリタグの基本デザイン */
+.news-category {
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  color: #fff;
+  white-space: nowrap;
+  text-align: center;
+  min-width: 80px;
+}
+
+/* カテゴリごとの色分け */
+.category-event { background-color: #ff7f50; } /* オレンジ系 */
+.category-info { background-color: #4682b4; }  /* ブルー系 */
+
+
+.news-link {
+  color: #ffffff;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.news-link + .news-link::before {
+    content: "";
+    width: 1px;
+    height: clamp(12px, 1.5vw, 18px);
+    background: rgba(255, 255, 255, 0.45);
+    margin: 0 clamp(4px, 0.6vw, 10px);
+}
+.news-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; /* 文字の少し下に配置 */
+  left: 0;
+  width: 0; /* 最初は線がない */
+  height: 1px; /* 線の太さ */
+  background-color: #ffffff; /* 線の色 */
+  transition: width 0.3s ease-out; /* 0.3秒かけて滑らかに変化 */
+}
+.news-item a {
+  color: #fff;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    padding: clamp(5px, 0.7vw, 8px) clamp(8px, 1vw, 16px);
+    border: 0;
+    transition: color 0.2s ease, transform 0.25s ease;
+    padding: 8px 16px;           
+    border-radius: 4px;         
+    transition: all 0.3s ease;  
+}
+
+.news-item a::after {
+  content: "";
+    position: absolute;
+    left: clamp(8px, 0.8vw, 12px);
+    right: clamp(8px, 0.8vw, 12px);
+    bottom: 3px;
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(154, 232, 255, 0.95), rgba(255, 255, 255, 0.95));
+    transform: scaleX(0.05);
+    transform-origin: left center;
+    opacity: 0;
+    transition: transform 0.32s cubic-bezier(0.17, 0.84, 0.44, 1), opacity 0.2s ease;
+}
+.news-link:hover {
+  opacity: 1;
+    transform: translateY(-1px);
+    color: #0fb3ea;
+    background-color: rgba(154, 232, 255, 0.15); 
+    text-shadow: 0 0 8px rgba(154, 232, 255, 0.5); 
+    transform: translateY(-2px);
+}
+
+/* スマホ対応（画面が狭い時は縦並びにする） */
+@media screen and (max-width: 600px) {
+  .news-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
