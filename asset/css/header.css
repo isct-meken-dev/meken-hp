@@ -28,7 +28,7 @@ header
     width: clamp(72px, 10vw, 140px);
     min-width: clamp(72px, 10vw, 140px);
 }
-.header > .logo > img{
+.header > .logo > a > img{
     display: block;
     width: clamp(56px, 5vw, 80px);
     height: auto;
@@ -58,7 +58,7 @@ header
     display: inline-flex;
     align-items: center;
     position: relative;
-     white-space: nowrap;    /* テキスト自体が途中で改行されるのを防ぐ */
+    white-space: nowrap;    /* テキスト自体が途中で改行されるのを防ぐ */
 }
 .nav-item + .nav-item::before{
     content: "";
@@ -77,15 +77,9 @@ header
     padding: clamp(5px, 0.7vw, 8px) clamp(8px, 1vw, 16px);
     border: 0;
     transition: color 0.2s ease, transform 0.25s ease;
-<<<<<<< HEAD
-    border-radius: 4px;          /* 角を丸める */
-    transition: all 0.3s ease;   /* 変化を滑らかに */
-    font-size: clamp(10px, 1.05vw, 15px); /* 最小10px、最大15pxの間で可変 */
-=======
     padding: 8px 16px;           
     border-radius: 4px;         
     transition: all 0.3s ease;  
->>>>>>> bfe82b5 (for:deploy)
 }
 .nav-item a::after{
     content: "";
