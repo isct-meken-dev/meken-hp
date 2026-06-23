@@ -37,11 +37,13 @@ async function renderBlog() {
       `;
 
       // 3. 画面（container）に追加する
+      if (container){
       container.insertAdjacentHTML('beforeend', htmlString);
+      }
       // 4. 最新の3件をトップにも表示する
       if (top_container && top_container.children.length < 3) {
-        top_container.insertAdjacentHTML('beforeend', htmlString);
-      }
+         top_container.insertAdjacentHTML('beforeend', htmlString);
+       }
     });
   } catch (error) {
     console.error("ブログデータの読み込みに失敗しました", error);
