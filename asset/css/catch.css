@@ -1,19 +1,20 @@
 
 .concept {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row; 
-    align-items: center;
     gap: 3px; 
     margin-bottom: 80px;
+    width: 90%;
+    max-width: 800px; 
+    margin: 0 auto 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .concept-disc {
     flex: 1;
     text-align: left;
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-direction: column; 
     align-items: flex-start; 
@@ -87,19 +88,6 @@
     }
 }
 
-.concept {
-    width: 90%;
-    max-width: 800px; 
-    margin: 0 auto 100px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.concept-disc {
-    width: 100%;
-}
 
 
 .concept .topsection-headline {

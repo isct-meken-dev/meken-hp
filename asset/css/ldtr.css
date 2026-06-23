@@ -1,16 +1,3 @@
-/* =========調整用スタイル========= */
-body {
-	background-color: #13302c;
-	min-height: 100vh;
-}
-h1 {
-	color: white;
-	font-size: 200px;
-	text-align: center;
-	line-height: 100vh;
-}
-/* =========ここまで調整用スタイル========= */
-
 .loading {
 	z-index: calc(infinity);
 	position: fixed;
@@ -19,8 +6,8 @@ h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 	background-color: #8b9ba8;
 }
 .loading-wrapper {
