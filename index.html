@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="asset/css/footer.css">
     <link rel="stylesheet" href="asset/css/blog.css">
     <link rel="stylesheet" href="asset/css/hero.css">
+    <link rel="stylesheet" href="asset/css/ldtr.css">
     <link rel="stylesheet" href="asset/css/responsive.css">
     <link  rel="stylesheet" href="asset/css/news.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,6 +25,10 @@
   </head>
 
   <body>
+    <div class="loading">
+      <div class="loading-wrapper"></div>
+    </div>
+
     <header class="header">
       <div class="logo">
       <a href="index.html">
@@ -111,42 +116,7 @@
       <h1 class="topsection-headline slidein-left">New Works</h1>
 
       <ul class="grid grid-col-3 slidein-bottom">
-        <li class="blog-item">
-          <article class="card" id="works-card">
-            <a href="https://x.com/titech_animeken/status/2029864937338851408?s=20" class="card-link">
-              <span class="card-label">New</span>
-              <img src="asset/images/works/24.webp" class="card-image" alt="記事の画像">
-              <div class="card-info">
-                <time datetime="23,24B習作" class="card-time">23,24B習作</time>
-                <h2 class="card-title">ぼっち・ざ・てっく！</h2>
-              </div>
-            </a>
-          </article>
-        </li>
-
-        <li class="blog-item">
-          <article class="card">
-            <a href="https://youtu.be/zvWP0LUMv4g?si=mIG2el1XkWzHeAdg" class="card-link">
-              <img src="asset/images/works/22.webp" class="card-image" alt="記事の画像">
-              <div class="card-info">
-                <time datetime="21,22B習作" class="card-time">21,22B習作</time>
-                <h2 class="card-title">とある科学の工業少女</h2>
-              </div>
-            </a>
-          </article>
-        </li>
-
-        <li class="blog-item">
-          <article class="card">
-            <a href="https://youtu.be/cjcZx44YZu0?si=AgkptdnLS6SBm2A4" class="card-link">
-              <img src="asset/images/works/20.webp" class="card-image" alt="記事の画像">
-              <div class="card-info">
-                <time datetime="20,21B習作" class="card-time">20,21B習作</time>
-                <h2 class="card-title">TokyoTechOnline</h2>
-              </div>
-            </a>
-          </article>
-        </li>
+        // 作品のカードをここにJavaScriptで挿入する --- IGNORE ---
       </ul>
       <div class="section-button">
         <a href="works.html" class="button">
@@ -158,7 +128,7 @@
     <section class="section blog">
       <h1 class="topsection-headline slidein-left">New Blog</h1>
 
-      <ul class="grid grid-col-3 slidein-bottom"> 
+      <ul class="grid grid-col-3 slidein-bottom" id ="blog-top-container"> 
         <li class="blog-item analysis">
           <article class="card">
             <a href="https://note.com/preview/n2be7566b4e62?prev_access_key=abeef871158f15cdaeecc4b42eb5537a" class="card-link">
@@ -179,7 +149,7 @@
           </article>
         </li>
         
-        <li class="blog-item">
+        <li class="blog-item" analysis>
           <article class="card">
             <a href="https://note.com/st_animationclub/n/n1982c0929aca" class="card-link">
               <img src="asset/images/blog/blog.026.003.webp" class="card-image" alt="記事の画像">
@@ -198,7 +168,7 @@
           </article>
         </li>
 
-        <li class="blog-item">
+        <li class="blog-item"   analysis>
           <article class="card">
             <a href="https://note.com/st_animationclub/n/n929d16ffcfcb" class="card-link">
               <img src="asset/images/blog/blog.026.002.webp" class="card-image" alt="記事の画像" width="200px" height="100px">
@@ -280,5 +250,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
     <script type="text/javascript" src="asset/js/tabswitch.js"></script>
     <script type="text/javascript" src="asset/js/video.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js" defer></script>
+    <script type="text/javascript" src="asset/js/ldtr.js" defer></script>
   </body>
 </html>
