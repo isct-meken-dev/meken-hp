@@ -32,11 +32,6 @@
     overflow: hidden !important; 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    
-    /* 透過キャラクター画像を入れた際、背景が完全に透けないように薄い黒を敷く */
-    /* background-color: rgba(10, 15, 20, 0.6);  */
-    
-    /* 高さと幅を親のグリッドに強制的に合わせる */
     width: 100%;
     height: 100%;
     display: flex;
