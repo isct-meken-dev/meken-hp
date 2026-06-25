@@ -4,18 +4,29 @@
     "url": "https://note.com/st_animationclub/n/n1982c0929aca",
     "date": "2026-05-01",
     "datetime": "2026-04-11",
-    "attribute": "",
+    "attribute": "New",
     "category": "analysis",
     "author": "浅葱藍璃",
     "authorIcon": "asset/images/blog/icon_asagi.webp",
     "thumbnail": "asset/images/blog/blog.026.003.webp"
   },
   {
+    "title": "英語で漫画を読んでみよう",
+    "url": "https://note.com/st_animationclub/n/n256dd49cdb1d",
+    "date": "2026-06-18",
+    "datetime": "2026-04-11",
+    "attribute": "",
+    "category": "analysis",
+    "author": "牛タン",
+    "authorIcon": "asset/images/blog/icon_usi.webp",
+    "thumbnail": "asset/images/blog/blog.026.006.webp"
+  },
+  {
     "title": "一週間に見たアニメの感想まとめ（4/13～4/19）",
     "url": "https://note.com/preview/n2be7566b4e62?prev_access_key=abeef871158f15cdaeecc4b42eb5537a",
     "date": "2026-05-11",
     "datetime": "2026-04-13",
-    "attribute": "New",
+    "attribute": "",
     "category": "analysis",
     "author": "きたq",
     "authorIcon": "asset/images/blog/icon_kita.webp",
@@ -52,6 +63,6 @@
     "category": "creation",
     "author": "Tn",
     "authorIcon": "asset/images/blog/icon_tn.webp",
-    "thumbnail": "asset/images/blog/blog.026.006.webp"
+    "thumbnail": "asset/images/blog/blog.026.007.webp"
   }
 ]
