@@ -12,27 +12,35 @@
     <link rel="stylesheet" href="asset/css/footer.css">
     <link rel="stylesheet" href="asset/css/blog.css">
     <link rel="stylesheet" href="asset/css/hero.css">
-    <link rel="stylesheet" href="asset/css/ldtr.css">
+    <link rel="stylesheet" href="asset/css/ldtr.css"> 
     <link rel="stylesheet" href="asset/css/responsive.css">
     <link  rel="stylesheet" href="asset/css/news.css">
-    <link  rel="stylesheet" href="asset/css/ldtransison.css">
+     <link  rel="stylesheet" href="asset/css/ldtransison.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
     <title>東京科学大学アニメーション研究会</title>
   </head>
+  
   <body>
-    <!-- <div class="loading">
+     <div class="loading">
       <div class="loading-wrapper"></div>
-    </div> -->
+    </div> 
 
     <header class="header">
       <div class="logo">
       <a href="index.html">
         <img src="asset/images/logo/meken.logo.bw_text_blur.svg" alt="ロゴ">
       </a>
-    </div>
+    </div> 
+
+     <div class="loading">
+      <video id="transition-video" muted playsinline>
+        <source src="asset/images/Transition3.webm" type="video/webm">
+      </video>
+    </div>  
+
       <nav class="header-nav">
         <ul class="nav-list">
           <li class="nav-item"><a href="news.html">News</a></li>
@@ -40,7 +48,6 @@
           <li class="nav-item"><a href="works.html">Works</a></li>
           <li class="nav-item"><a href="blog.html">Blog</a></li>
           <li class="nav-item"><a href="contact.html">Contact</a></li>
-
         </ul>
       </nav>
     </header>
@@ -62,6 +69,12 @@
     <h1 class="topsection-headline slidein-left">News</h1>
     
     <ul class="news-list">
+      <li class="news-item">
+        <span class="news-date">2026.06.24</span>
+        <span class="news-category category-event">お知らせ</span>
+        <a href="https://www.nicovideo.jp/watch/sm46472399" class="news-link">24習作「ぼっち・ざ・てっく！」を投稿しました！
+        </a>
+      </li>
       <li class="news-item">
         <span class="news-date">2026.06.06</span>
         <span class="news-category category-event">イベント</span>
@@ -88,7 +101,7 @@
             <img src="asset/images/aboutus/合宿_3.webp" alt="活動風景2">
           </div>
           <div class="img-box img-main">
-            <img src="asset/images/meken.concept.webp" alt="メイン活動風景">
+            <img src="asset/images/aboutus/制作_5.webp" alt="メイン活動風景">
           </div>
         </div>
         
@@ -227,9 +240,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
     <script type="text/javascript" src="asset/js/tabswitch.js"></script>
     <script type="text/javascript" src="asset/js/video.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js" defer></script>
-    <script type="text/javascript" src="asset/js/ldtr.js"></script>
+    <script type="text/javascript" src="asset/js/ldtr.js" defer></script>
     <script type="text/javascript" src="asset/js/blogrender.js" defer></script>
   </body>
 </html>
