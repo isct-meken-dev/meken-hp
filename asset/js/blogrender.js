@@ -16,7 +16,7 @@ async function renderBlog() {
 
       // HTMLのテンプレート
       const htmlString = `
-        <li class="blog-item" ${blog.category ? `data-category="${blog.category}"` : ''}>
+        <li class="blog-item , tabbody-elem" ${blog.category ? `data-category="${blog.category}"` : ''}>
           <article class="card">
             <a href="${blog.url}" class="card-link">
               ${labelHtml}
