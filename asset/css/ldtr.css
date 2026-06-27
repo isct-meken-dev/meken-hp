@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff00; /* 背景色を指定 */
+  background-color: transparent; /* ここを白(#ffffff)から透明に変更 */
   opacity: 0;
   pointer-events: none; /* 初期はクリックを透過 */
   transition: opacity 0.3s ease;
@@ -14,7 +14,6 @@
 .loading.is-active {
   opacity: 1;
   pointer-events: auto; /* 表示中はクリックをブロック */
-  color: #ffffff00;
 }
 
 #transition-video {
