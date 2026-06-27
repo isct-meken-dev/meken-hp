@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="asset/css/ldtr.css"> 
     <link rel="stylesheet" href="asset/css/responsive.css">
     <link  rel="stylesheet" href="asset/css/news.css">
-     <link  rel="stylesheet" href="asset/css/ldtransison.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -24,9 +23,11 @@
   </head>
   
   <body>
-     <div class="loading">
-      <div class="loading-wrapper"></div>
-    </div> 
+   <div class="loading">
+      <video id="transition-video" muted playsinline>
+        <source src="asset/webm/Transition3.webm" type="video/webm">
+      </video>
+   </div>
 
     <header class="header">
       <div class="logo">
@@ -37,7 +38,7 @@
 
      <div class="loading">
       <video id="transition-video" muted playsinline>
-        <source src="asset/images/Transition3.webm" type="video/webm">
+        <source src="asset/webm/Transition3.webm" type="video/webm">
       </video>
     </div>  
 
@@ -240,7 +241,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
     <script type="text/javascript" src="asset/js/tabswitch.js"></script>
     <script type="text/javascript" src="asset/js/video.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js" defer></script>
     <script type="text/javascript" src="asset/js/ldtr.js" defer></script>
     <script type="text/javascript" src="asset/js/blogrender.js" defer></script>
   </body>
