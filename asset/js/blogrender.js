@@ -16,7 +16,7 @@ async function renderBlog() {
 
       // HTMLのテンプレート
       const htmlString = `
-        <li class="blog-item , tabbody-elem" ${blog.category ? `data-category="${blog.category}"` : ''}>
+        <li class="blog-item" ${blog.category ? `data-category="${blog.category}"` : ''}>
           <article class="card">
             <a href="${blog.url}" class="card-link">
               ${labelHtml}
@@ -38,17 +38,71 @@ async function renderBlog() {
 
       // 3. 画面（container）に追加する
       if (container){
-      container.insertAdjacentHTML('beforeend', htmlString);
+        container.insertAdjacentHTML('beforeend', htmlString);
       }
       // 4. 最新の3件をトップにも表示する
       if (top_container && top_container.children.length < 3) {
          top_container.insertAdjacentHTML('beforeend', htmlString);
        }
     });
+
+    // 5. ブログ記事の生成がすべて完了した後に、絞り込み機能をセットアップする
+    if (container) {
+      setupBlogFilter();
+    }
+
   } catch (error) {
     console.error("ブログデータの読み込みに失敗しました", error);
   }
 }
 
-// ページが読み込まれたら実行
-renderBlog();
+// タブによる絞り込み機能の関数
+// タブ（カテゴリ）による絞り込み機能の関数
+function setupBlogFilter() {
+  const filterTabs = document.querySelectorAll('.tab-elem');
+  const blogItems = document.querySelectorAll('.blog-item');
+
+  // タブがないページ（トップページなど）では何もしない
+  if (filterTabs.length === 0 || blogItems.length === 0) return;
+
+  filterTabs.forEach(tab => {
+    tab.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      // クリックされた枠の中にある h2（filter-btn）を探す
+      const btn = this.querySelector('.filter-btn');
+      if (!btn) return;
+
+      // 1. すべてのタブの文字から active クラスを外す
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      
+      // 2. クリックされたタブの文字に active クラスを付ける
+      btn.classList.add('active');
+
+      // 3. 絞り込み条件を取得
+      const targetCategory = btn.getAttribute('data-filter');
+
+      // 4. すべての記事をチェックして、表示/非表示を切り替える（★アニメーション追加）
+      blogItems.forEach(item => {
+        const itemCategory = item.getAttribute('data-category');
+
+        if (targetCategory === 'all' || targetCategory === itemCategory) {
+           item.style.display = ''; // まず画面に配置する
+
+           // JavaScriptで「ふわっと浮かび上がる」アニメーションを直接かける
+           item.animate([
+             { opacity: 0, transform: 'translateY(20px)' }, // スタート時の状態（透明＆少し下）
+             { opacity: 1, transform: 'translateY(0)' }     // ゴール時の状態（くっきり＆元の位置）
+           ], {
+             duration: 400,       // 0.4秒かけて動く
+             easing: 'ease-out',  // ふわっと減速する自然な動き
+             fill: 'forwards'
+           });
+           
+        } else {
+           item.style.display = 'none'; // 条件に合わないものは隠す
+        }
+      });
+    });
+  });
+}renderBlog();
