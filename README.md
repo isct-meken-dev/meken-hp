@@ -1,19 +1,20 @@
 # meken-HMtest
 
 アニメーション研究会のホームページ制作プロジェクトです。  
-引き継ぎ資料が不足している前提で、静的サイトとして一から構築しています。
+引き継ぎ資料が不足している前提で、静的サイトとして一から構築しています。  
 [現HP](https://animeken.org/)
 [前HP](http://titans-animeken.com/)
 
-以下のような記事を目標にしています。
-https://www.mappa.co.jp/
-https://st-kai.jp/
-https://vll.jp/
-https://wafl.jp/
+以下のような記事を目標にしています。  
+https://www.mappa.co.jp/  
+https://st-kai.jp/  
+https://vll.jp/  
+https://wafl.jp/  
 
 ## 更新事項
-・習作の投稿
-・ブログの投稿
+・習作の投稿  
+・ブログの投稿  
+
 ## 概要
 
 - 技術構成: HTML / CSS / JavaScript
