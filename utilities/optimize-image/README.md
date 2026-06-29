@@ -1,37 +1,11 @@
-# asset
+# optimize
 
-画像の最適化およびディレクトリ同期管理システム。
-
-## ディレクトリ構成
-
-```text
-asset/
-├─ css
-├─ :
-├─ images/ (gitignore)      # 実際に表示で使用されるWebP画像
-│ ├─ xxx.webp
-│ └─ yyy.webp
-├─ images.bak/              # 管理用の元画像
-│ ├─ xxx.big.png
-│ └─ yyy.jpg
-├─ optimize.ipynb           # 最適化スクリプト
-├─ .gitignore
-└─ README.md
-```
-
----
+画像の最適化システム。
 
 ## 運用ワークフロー
 
-### 1. 初回利用時（同期）
-
-クローンやフェッチの直後は、`.gitignore` の対象である `images/` ディレクトリが存在しない状態です。
-全ての画像の参照が切れているため、各自 **`optimize.ipynb`** を実行して表示用の画像を生成してください。
-
-### 2. 画像を追加・変更する場合
-
-1. **`images.bak/`** に元画像を追加してください。
-2. スクリプトを実行すると、`images/` に最適化された WebP 画像が生成されます。
+1. **`input/`** に元画像を追加してください。
+2. スクリプトを実行すると、`ouput/` に最適化された WebP 画像が生成されます。
 
 > **推奨形式** : `png` または `svg`
 >
@@ -65,6 +39,7 @@ asset/
 2. **VSCode拡張機能の導入**: 以下の2つをインストールしてください。
     - `Python` (Microsoft)
     - `Jupyter` (Microsoft)
+3. **ipynb環境の確認**: VSCodeで `optimize.ipynb` を開き、右上に「env (Python 3.11.5)」と書かれているか確認してください。
 
 ### 実行手順
 
