@@ -1,20 +1,23 @@
+<!DOCTYPE html>
 <html>
   <head >
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="asset/images/meken.icon.webp" class="icon-img">
-    <link rel="stylesheet" href="asset/css/base.css">
-    <link rel="stylesheet" href="asset/css/header.css">
-    <link rel="stylesheet" href="asset/css/content.css">
-    <link rel="stylesheet" href="asset/css/sanitize.css">
-    <link rel="stylesheet" href="asset/css/about.css">
-    <link rel="stylesheet" href="asset/css/footer.css">
-    <link rel="stylesheet" href="asset/css/blog.css">
-    <link rel="stylesheet" href="asset/css/hero.css">
-    <link rel="stylesheet" href="asset/css/ldtr.css"> 
-    <link rel="stylesheet" href="asset/css/responsive.css">
-    <link  rel="stylesheet" href="asset/css/news.css">
+
+    <link rel="icon" href="assets/brand/logo-old.webp" class="icon-img">
+    <link rel="stylesheet" href="src/css/base.css">
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/content.css">
+    <link rel="stylesheet" href="src/css/sanitize.css">
+    <link rel="stylesheet" href="src/css/about.css">
+    <link rel="stylesheet" href="src/css/footer.css">
+    <link rel="stylesheet" href="src/css/blog.css">
+    <link rel="stylesheet" href="src/css/hero.css">
+    <link rel="stylesheet" href="src/css/ldtr.css"> 
+    <link rel="stylesheet" href="src/css/responsive.css">
+    <link rel="stylesheet" href="src/css/news.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -23,19 +26,18 @@
   </head>
   
   <body>
-   <div class="loading">
+    <div class="loading">
       <video id="transition-video" muted playsinline>
-        <source src="asset/webm/Transition3.webm" type="video/webm">
+        <source src="assets/misc/page-transition/transition-3.webm" type="video/webm">
       </video>
-   </div>
+    </div>
 
     <header class="header">
       <div class="logo">
       <a href="index.html">
-        <img src="asset/images/logo/meken.logo.bw_text_blur.svg" alt="ロゴ">
+        <img src="assets/brand/logo-color-inset.svg" alt="ロゴ">
       </a>
     </div> 
- 
 
       <nav class="header-nav">
         <ul class="nav-list">
@@ -49,10 +51,10 @@
     </header>
 
     <section class="hero">
-       <img src="asset/images/work.024.001.logo_w.webp" alt="ぼっち・ざ・てっく！" > 
+      <img src="assets/works/24-syusaku/digest.mp4" alt="ぼっち・ざ・てっく！" > 
     
       <video autoplay loop muted playsinline preload="metadata" class="hero-video blur-layer">
-        <source src="asset/images/work.024.001.digest.mp4" type="video/mp4">
+        <source src="assets/works/24-syusaku/digest.mp4" type="video/mp4">
       </video>
       <div class="top-scroll">
         <a href="#aboutus" class="scroll-symbol">
@@ -91,13 +93,13 @@
         
         <div class="aboutus-images">
           <div class="img-box img-sub1">
-            <img src="asset/images/aboutus/コミケ_6.webp" alt="活動風景1">
+            <img src="assets/slice-of-life/comike-booth.webp" alt="活動風景1">
           </div>
           <div class="img-box img-sub2">
-            <img src="asset/images/aboutus/合宿_3.webp" alt="活動風景2">
+            <img src="assets/slice-of-life/handheld-fireworks.webp" alt="活動風景2">
           </div>
           <div class="img-box img-main">
-            <img src="asset/images/aboutus/制作_5.webp" alt="メイン活動風景">
+            <img src="assets/slice-of-life/circle-interior.webp" alt="メイン活動風景">
           </div>
         </div>
         
@@ -123,11 +125,11 @@
       <h1 class="topsection-headline slidein-left">New Works</h1>
 
       <ul class="grid grid-col-3 slidein-bottom">
-       <li class="blog-item">
+        <li class="blog-item">
           <article class="card" id="works-card">
             <a href="https://x.com/titech_animeken/status/2029864937338851408?s=20" class="card-link">
               <span class="card-label">New</span>
-              <img src="asset/images/works/24.webp" class="card-image" alt="記事の画像">
+              <img src="assets/works/24-syusaku/thumbnail.webp" class="card-image" alt="記事の画像">
               <div class="card-info">
                 <time datetime="23,24B習作" class="card-time">23,24B習作</time>
                 <h2 class="card-title">ぼっち・ざ・てっく！</h2>
@@ -139,7 +141,7 @@
         <li class="blog-item">
           <article class="card">
             <a href="https://youtu.be/zvWP0LUMv4g?si=mIG2el1XkWzHeAdg" class="card-link">
-              <img src="asset/images/works/22.webp" class="card-image" alt="記事の画像">
+              <img src="assets/works/22-goudou/thumbnail.webp" class="card-image" alt="記事の画像">
               <div class="card-info">
                 <time datetime="21,22B習作" class="card-time">21,22B習作</time>
                 <h2 class="card-title">とある科学の工業少女</h2>
@@ -151,7 +153,7 @@
         <li class="blog-item">
           <article class="card">
             <a href="https://youtu.be/cjcZx44YZu0?si=AgkptdnLS6SBm2A4" class="card-link">
-              <img src="asset/images/works/20.webp" class="card-image" alt="記事の画像">
+              <img src="assets/works/20-syusaku/thumbnail.webp" class="card-image" alt="記事の画像">
               <div class="card-info">
                 <time datetime="20,21B習作" class="card-time">20,21B習作</time>
                 <h2 class="card-title">TokyoTechOnline</h2>
@@ -186,7 +188,7 @@
       <div class="footer-content">
         <figure class="footer-info">
           <div class="info">
-            <img src="asset/images/logo/meken.logo.bw_text_blur.svg" alt="ロゴ" height="250px" width="400px">
+            <img src="assets/brand/logo-color-inset.svg" alt="ロゴ" height="250px" width="400px">
             <div class="address-section">
               <h3 class="address-title">所在地</h3>
               <address class="address">
@@ -206,13 +208,13 @@
           <h3 class="social-title">Follow Us</h3>
           <div class="sns-icons">
             <a href="https://discord.gg/g8zrhT9rW" target="_blank" rel="noopener noreferrer" title="Discord">
-              <img src="asset/images/sns/sns.discord.sml.svg" alt="Discord" height="50px" width="50px">
+              <img src="assets/misc/sns-logos/discord.svg" alt="Discord" height="50px" width="50px">
             </a>
             <a href="https://x.com/titech_animeken?s=20" target="_blank" rel="noopener noreferrer" title="X (Twitter)">
-              <img src="asset/images/sns/sns.twitter.sml.svg" alt="X (Twitter)" height="50px" width="50px">
+              <img src="assets/misc/sns-logos/twitter.svg" alt="X (Twitter)" height="50px" width="50px">
             </a>
             <a href="https://www.youtube.com/@%E6%9D%B1%E5%B7%A5%E7%A0%94%E5%A4%AA%E9%83%8E" target="_blank" rel="noopener noreferrer" title="YouTube">
-              <img src="asset/images/sns/sns.youtube.sml.svg" alt="YouTube" height="50px" width="50px">
+              <img src="assets/misc/sns-logos/youtube.svg" alt="YouTube" height="50px" width="50px">
             </a>
             <!-- <a href="https://line.me/" target="_blank" rel="noopener noreferrer" title="LINE">
               <span class="sns-placeholder">LINE</span>
@@ -229,14 +231,14 @@
 
     </section>
 
-    <script type="text/javascript" src="asset/js/slidein.js"></script>
-    <script type="text/javascript" src="asset/js/backmp4.js"></script>
-    <script type="text/javascript" src="asset/js/scroll.js"></script>
-    <script type="text/javascript" src="asset/js/splide.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
-    <script type="text/javascript" src="asset/js/tabswitch.js"></script>
-    <script type="text/javascript" src="asset/js/video.js"></script>
-    <script type="text/javascript" src="asset/js/ldtr.js" defer></script>
-    <script type="text/javascript" src="asset/js/blogrender.js" defer></script>
+    <script type="text/javascript" src="src/js/slidein.js"></script>
+    <script type="text/javascript" src="src/js/backmp4.js"></script>
+    <script type="text/javascript" src="src/js/scroll.js"></script>
+    <script type="text/javascript" src="src/js/splide.js"></script>
+    <script type="text/javascript" src="src/js/tabswitch.js"></script>
+    <script type="text/javascript" src="src/js/video.js"></script>
+    <script type="text/javascript" src="src/js/ldtr.js" defer></script>
+    <script type="text/javascript" src="src/js/blogrender.js" defer></script>
   </body>
 </html>

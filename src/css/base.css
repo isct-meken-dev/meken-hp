@@ -43,7 +43,7 @@ body::before{
 }
 @font-face {
     font-family: 'keifont';
-    src: url('../fonts/keifont.ttf') format('truetype');
+    src: url('../../assets/misc/keifont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
