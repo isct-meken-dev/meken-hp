@@ -1,4 +1,4 @@
-# meken-HMtest
+# meken-hp
 
 アニメーション研究会のホームページ制作プロジェクトです。  
 引き継ぎ資料が不足している前提で、静的サイトとして一から構築しています。  
@@ -24,14 +24,16 @@ https://wafl.jp/
 ## ディレクトリ構成
 
 ```text
-meken-HMtest/
+meken-hp/
 ├── index.html
 ├── README.md
-└── asset/
+├── assets/
+├── docs/
+├── utilities/
+└── src/
 	├── css/
 	│   ├── sanitize.css
-	│   └── style.css
-	├── images/
+	│   └── styles.css
 	└── js/
 		└── app.js
 ```
