@@ -2,7 +2,7 @@
 async function renderBlog() {
   try {
     // 1. JSONファイルを読み込む
-    const response = await fetch('asset/json/blog.json');
+    const response = await fetch('src/json/blog.json');
     const blogs = await response.json();
     blogs.sort((a, b) => new Date(b.date) - new Date(a.date)); // 日付で降順にソート
     
