@@ -7,8 +7,8 @@
     "attribute": "",
     "category": "analysis",
     "author": "浅葱藍璃",
-    "authorIcon": "assets/avatars/asagi.webp",
-    "thumbnail": "assets/blog-headers/2026/art-practice-prequisites.webp"
+    "authorIcon": "assets/blog/icons/asagi.webp",
+    "thumbnail": "assets/blog/headers/2026/art-practice-prequisites.webp"
   },
   {
     "title": "英語で漫画を読んでみよう<br>！！！",
@@ -18,8 +18,8 @@
     "attribute": "",
     "category": "analysis",
     "author": "牛タン",
-    "authorIcon": "assets/avatars/gyutan.webp",
-    "thumbnail": "assets/blog-headers/2026/english-comic-first-thoughts.webp"
+    "authorIcon": "assets/blog/icons/gyutan.webp",
+    "thumbnail": "assets/blog/headers/2026/english-comic-first-thoughts.webp"
   },
   {
     "title": "一週間に見たアニメの感想まとめ（4/13～4/19）",
@@ -29,8 +29,8 @@
     "attribute": "",
     "category": "analysis",
     "author": "きたq",
-    "authorIcon": "assets/avatars/kita.webp",
-    "thumbnail": "assets/blog-headers/2026/1week-anime-review-0413.webp"
+    "authorIcon": "assets/blog/icons/kita.webp",
+    "thumbnail": "assets/blog/headers/2026/1week-anime-review-0413.webp"
   },
   {
     "title": "お前まさかアニメのOP飛ばしたりしてねぇよな？",
@@ -40,8 +40,8 @@
     "attribute": "",
     "category": "analysis",
     "author": "エルマer",
-    "authorIcon": "assets/avatars/erumare.webp",
-    "thumbnail": "assets/blog-headers/2026/opening-struggles.webp"
+    "authorIcon": "assets/blog/icons/erumare.webp",
+    "thumbnail": "assets/blog/headers/2026/opening-struggles.webp"
   },
   {
     "title": "【オリジナル制作】赤面してる女の子ってかわいいよね",
@@ -51,8 +51,8 @@
     "attribute": "",
     "category": "creation",
     "author": "エライジン",
-    "authorIcon": "assets/avatars/elaidin.webp",
-    "thumbnail": "assets/blog-headers/2026/blushing-is-cute.webp"
+    "authorIcon": "assets/blog/icons/elaidin.webp",
+    "thumbnail": "assets/blog/headers/2026/blushing-is-cute.webp"
   },
   {
     "title": "絵の習慣をつけたい方へ：一日一絵のすゝめ",
@@ -62,7 +62,7 @@
     "attribute": "",
     "category": "creation",
     "author": "Tn",
-    "authorIcon": "assets/avatars/tn.webp",
-    "thumbnail": "assets/blog-headers/2026/art-habit-prerequisites.webp"
+    "authorIcon": "assets/blog/icons/tn.webp",
+    "thumbnail": "assets/blog/headers/2026/art-habit-prerequisites.webp"
   }
 ]
