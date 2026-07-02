@@ -57,7 +57,6 @@ async function renderBlog() {
 }
 
 // タブによる絞り込み機能の関数
-// タブ（カテゴリ）による絞り込み機能の関数
 function setupBlogFilter() {
   const filterTabs = document.querySelectorAll('.tab-elem');
   const blogItems = document.querySelectorAll('.blog-item');
@@ -82,7 +81,7 @@ function setupBlogFilter() {
       // 3. 絞り込み条件を取得
       const targetCategory = btn.getAttribute('data-filter');
 
-      // 4. すべての記事をチェックして、表示/非表示を切り替える（★アニメーション追加）
+      // 4. すべての記事をチェックして、表示/非表示を切り替える
       blogItems.forEach(item => {
         const itemCategory = item.getAttribute('data-category');
 

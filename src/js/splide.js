@@ -20,7 +20,6 @@ if (splideTarget) {
 }
 
 // 自動横スクロール
-// asset/js/splide.js に追記
 
 document.addEventListener('DOMContentLoaded', function() {
     // Aboutセクションのスライダー要素を取得
