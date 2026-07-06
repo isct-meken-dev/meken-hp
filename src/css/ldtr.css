@@ -1,0 +1,23 @@
+.loading {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent; /* ここを白(#ffffff)から透明に変更 */
+  opacity: 0;
+  pointer-events: none; /* 初期はクリックを透過 */
+  transition: opacity 0.3s ease;
+}
+
+.loading.is-active {
+  opacity: 1;
+  pointer-events: auto; /* 表示中はクリックをブロック */
+}
+
+#transition-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
