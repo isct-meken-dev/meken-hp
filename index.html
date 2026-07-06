@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head >
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7N287QZQ47"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7N287QZQ47');
+    </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,8 +32,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
     <title>東京科学大学アニメーション研究会</title>
+
   </head>
-  
+
   <body>
     <div class="loading">
       <video id="transition-video" muted playsinline>
@@ -55,6 +65,14 @@
     
       <video autoplay loop muted playsinline preload="metadata" class="hero-video blur-layer">
         <source src="assets/works/24-syusaku/digest.mp4" type="video/mp4">
+        <!--
+        <iframe 
+          src="https://www.youtube.com/embed/【あなたの動画ID】?autoplay=1&mute=1&loop=1&playlist=【あなたの動画ID】&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" 
+          frameborder="0" 
+          allow="autoplay; encrypted-media" 
+          allowfullscreen>
+        </iframe>
+        -->
       </video>
       <div class="top-scroll">
         <a href="#aboutus" class="scroll-symbol">
@@ -85,6 +103,11 @@
         <a href="#" class="news-link">アニメ研の公式サイトを新設したぞ！</a>
       </li>
     </ul>
+    <div class="section-button">
+        <a href="news.html" class="button">
+          More News
+        </a>
+      </div>
   </section>
 
     <section class="section aboutus-new">
@@ -216,6 +239,9 @@
             <a href="https://www.youtube.com/@%E6%9D%B1%E5%B7%A5%E7%A0%94%E5%A4%AA%E9%83%8E" target="_blank" rel="noopener noreferrer" title="YouTube">
               <img src="assets/misc/sns-logos/youtube.svg" alt="YouTube" height="50px" width="50px">
             </a>
+            <a href="https://www.nicovideo.jp/user/103187" target="_blank" rel="noopener noreferrer" title="Niconico">
+              <img src="assets/misc/sns-logos/niconico.svg" alt="Niconico" height="50px" width="50px">
+            </a>
             <!-- <a href="https://line.me/" target="_blank" rel="noopener noreferrer" title="LINE">
               <span class="sns-placeholder">LINE</span>
             </a>
@@ -235,7 +261,7 @@
     <script type="text/javascript" src="src/js/slidein.js"></script>
     <script type="text/javascript" src="src/js/backmp4.js"></script>
     <script type="text/javascript" src="src/js/scroll.js"></script>
-    <script type="text/javascript" src="src/js/splide.js"></script>
+    <script type="module" src="src/js/splide.js"></script>
     <script type="text/javascript" src="src/js/tabswitch.js"></script>
     <script type="text/javascript" src="src/js/video.js"></script>
     <script type="text/javascript" src="src/js/ldtr.js" defer></script>
