@@ -1,0 +1,6 @@
+#!/Users/tn/Programs/school-club/animeken/meken-hp/utilities/optimize-image/.venv/bin/python3.14
+import sys
+from pip._internal.cli.main import main
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(main())
