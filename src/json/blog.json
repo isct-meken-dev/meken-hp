@@ -23,7 +23,7 @@
   },
   {
     "title": "一週間に見たアニメの感想まとめ（4/13～4/19）",
-    "url": "https://note.com/preview/n2be7566b4e62?prev_access_key=abeef871158f15cdaeecc4b42eb5537a",
+    "url": "https://note.com/st_animationclub/n/n2be7566b4e62",
     "date": "2026-05-11",
     "datetime": "2026-04-13",
     "attribute": "",
@@ -75,5 +75,16 @@
     "author": "エルマer",
     "authorIcon": "assets/blog/icons/erumare.webp",
     "thumbnail": "assets/blog/headers/2026/hpcreate.webp"
+  },
+  {
+    "title": "アニメキャプチャ管理アプリを作らせた。",
+    "url": "https://note.com/st_animationclub/n/ne5c1f29cbede",
+    "date": "2026-07-12",
+    "datetime": "2026-07-12",
+    "attribute": "",
+    "category": "analysis",
+    "author": "きたq",
+    "authorIcon": "assets/blog/icons/kita.webp",
+    "thumbnail": "assets/blog/headers/2026/anime-capture-app.webp"
   }
 ]
